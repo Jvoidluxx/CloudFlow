@@ -36,9 +36,9 @@ public class Frame {
     }
     public void onRender(int mouseX, int mouseY, float partialTicks) {
         if (extended) {
-            RenderUtil.drawRoundedRectSkid3(x, y, x+width, y+height, 5, new Color(10, 10, 10, 230).getRGB());
+            RenderUtil.drawRoundedRectSkid3(x, y, x+width, y+height, 5, 0xFFFF4F4F);
         }else {
-            RenderUtil.drawRoundedRectSkid2(x, y, width, height, 5, new Color(10, 10, 10, 230).getRGB());
+            RenderUtil.drawRoundedRectSkid2(x, y, width, height, 5, 0xFFFF4F4F);
         }
         fr.drawString(category.displayName, x+2, y+2, -1);
         if (extended) {

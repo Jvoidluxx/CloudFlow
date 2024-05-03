@@ -1,15 +1,15 @@
-[16:44:05] [Client thread/INFO]: Setting user: Player876
-[16:44:05] [Client thread/INFO]: (Session ID is token:0:Player876)
-[16:44:06] [Client thread/INFO]: LWJGL Version: 2.9.4
-[16:44:07] [Client thread/INFO]: Reloading ResourceManager: Default
-[16:44:07] [Client thread/ERROR]: Couldn't initialize twitch stream
-[16:44:07] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[16:44:07] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[16:44:07] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[16:44:07] [Thread-6/INFO]: OpenAL initialized.
-[16:44:07] [Sound Library Loader/INFO]: Sound engine started
-[16:44:10] [Client thread/INFO]: Created: 512x512 textures-atlas
-[16:44:11] [Client thread/ERROR]: Realms module missing
+[18:57:20] [Client thread/INFO]: Setting user: Player687
+[18:57:20] [Client thread/INFO]: (Session ID is token:0:Player687)
+[18:57:20] [Client thread/INFO]: LWJGL Version: 2.9.4
+[18:57:21] [Client thread/INFO]: Reloading ResourceManager: Default
+[18:57:21] [Client thread/ERROR]: Couldn't initialize twitch stream
+[18:57:21] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:57:21] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[18:57:21] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:57:21] [Thread-6/INFO]: OpenAL initialized.
+[18:57:21] [Sound Library Loader/INFO]: Sound engine started
+[18:57:23] [Client thread/INFO]: Created: 512x512 textures-atlas
+[18:57:24] [Client thread/ERROR]: Realms module missing
 java.lang.ClassNotFoundException: com.mojang.realmsclient.gui.screens.RealmsNotificationsScreen
 	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_392]
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:418) ~[?:1.8.0_392]
@@ -25,6 +25,58 @@ java.lang.ClassNotFoundException: com.mojang.realmsclient.gui.screens.RealmsNoti
 	at net.minecraft.client.Minecraft.run(Minecraft.java:408) [classes/:?]
 	at net.minecraft.client.main.Main.main(Main.java:113) [classes/:?]
 	at Start.main(Start.java:22) [test-classes/:?]
-[16:44:16] [Client thread/INFO]: Stopping!
-[16:44:16] [Client thread/INFO]: SoundSystem shutting down...
-[16:44:16] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[18:57:39] [Client thread/ERROR]: Realms module missing
+java.lang.ClassNotFoundException: com.mojang.realmsclient.gui.screens.RealmsNotificationsScreen
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_392]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418) ~[?:1.8.0_392]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352) ~[?:1.8.0_392]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351) ~[?:1.8.0_392]
+	at java.lang.Class.forName0(Native Method) ~[?:1.8.0_392]
+	at java.lang.Class.forName(Class.java:264) ~[?:1.8.0_392]
+	at net.minecraft.realms.RealmsBridge.getNotificationScreen(RealmsBridge.java:38) [classes/:?]
+	at net.minecraft.client.gui.GuiMainMenu.initGui(GuiMainMenu.java:247) [classes/:?]
+	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:556) [classes/:?]
+	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1019) [classes/:?]
+	at net.minecraft.client.gui.GuiSelectWorld.func_146615_e(GuiSelectWorld.java:180) [classes/:?]
+	at net.minecraft.client.gui.GuiSelectWorld$List.elementClicked(GuiSelectWorld.java:284) [classes/:?]
+	at net.minecraft.client.gui.GuiSlot.handleMouseInput(GuiSlot.java:354) [classes/:?]
+	at net.minecraft.client.gui.GuiSelectWorld.handleMouseInput(GuiSelectWorld.java:83) [classes/:?]
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:588) [classes/:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1800) [classes/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1124) [classes/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:428) [classes/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [classes/:?]
+	at Start.main(Start.java:22) [test-classes/:?]
+[18:57:40] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
+[18:57:40] [Server thread/INFO]: Generating keypair
+[18:57:40] [Server thread/INFO]: Preparing start region for level 0
+[18:57:40] [Server thread/INFO]: Changing view distance to 12, from 10
+[18:57:40] [Client thread/ERROR]: Realms module missing
+java.lang.ClassNotFoundException: com.mojang.realmsclient.gui.screens.RealmsNotificationsScreen
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_392]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418) ~[?:1.8.0_392]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352) ~[?:1.8.0_392]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351) ~[?:1.8.0_392]
+	at java.lang.Class.forName0(Native Method) ~[?:1.8.0_392]
+	at java.lang.Class.forName(Class.java:264) ~[?:1.8.0_392]
+	at net.minecraft.realms.RealmsBridge.getNotificationScreen(RealmsBridge.java:38) [classes/:?]
+	at net.minecraft.client.gui.GuiMainMenu.initGui(GuiMainMenu.java:247) [classes/:?]
+	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:556) [classes/:?]
+	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1019) [classes/:?]
+	at net.minecraft.client.Minecraft.launchIntegratedServer(Minecraft.java:2339) [classes/:?]
+	at net.minecraft.client.gui.GuiSelectWorld.func_146615_e(GuiSelectWorld.java:201) [classes/:?]
+	at net.minecraft.client.gui.GuiSelectWorld$List.elementClicked(GuiSelectWorld.java:284) [classes/:?]
+	at net.minecraft.client.gui.GuiSlot.handleMouseInput(GuiSlot.java:354) [classes/:?]
+	at net.minecraft.client.gui.GuiSelectWorld.handleMouseInput(GuiSelectWorld.java:83) [classes/:?]
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:588) [classes/:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1800) [classes/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1124) [classes/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:428) [classes/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [classes/:?]
+	at Start.main(Start.java:22) [test-classes/:?]
+[18:57:41] [Server thread/INFO]: Player687[local:E:5f85f30d] logged in with entity id 88 at (576.150064894966, 73.0, 314.82500441393813)
+[18:57:41] [Server thread/INFO]: Player687 joined the game
+[19:03:20] [Server thread/INFO]: Saving and pausing game...
+[19:03:20] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[19:03:20] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[19:03:20] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End

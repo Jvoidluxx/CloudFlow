@@ -1,6 +1,7 @@
 package cloud.main.utils.clickgui;
 
 import cloud.main.module.Module;
+import cloud.main.utils.Colors;
 import cloud.main.utils.RenderUtil;
 import cloud.main.utils.clickgui.Frame;
 import cloud.main.utils.clickgui.components.CheckBox;
@@ -43,7 +44,7 @@ public class ModuleButton {
         }
     }
     public void onRender(int mouseX, int mouseY, float partialTicks) {
-        RenderUtil.drawRectBetter(frame.x, frame.y+offset, frame.x+frame.width, frame.y+frame.height+offset, 0xFF4F4F4F);
+        RenderUtil.drawRectBetter(frame.x, frame.y+offset, frame.x+frame.width, frame.y+frame.height+offset, 0xFF1F1F1F);
         frame.fr.drawString(module.getName(), frame.x+2, frame.y+offset+2, module.isToggled() ? -1 : -5592406);
         if (extended) {
             for (Component c : components) {

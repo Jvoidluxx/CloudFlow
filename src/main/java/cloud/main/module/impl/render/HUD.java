@@ -48,7 +48,7 @@ public class HUD extends Module {
 
     private void drawList() {
         ScaledResolution sr = new ScaledResolution(mc);
-        int yCount = 6;
+        int yCount = 8;
         ArrayList<Module> mod = new ArrayList<>();
         for (Module m : Manager.modules) {
             if (m.isToggled()) {
@@ -57,6 +57,7 @@ public class HUD extends Module {
         }
         mod.sort(Comparator.comparing(m -> -fr.getStringWidth(m.getName())));
         for (Module m : mod) {
+            //RenderUtil.drawRoundedRectSkid3(sr.getScaledWidth()-30, yCount +2, sr.getScaledWidth()+40, yCount - 4, 5, 0xFF1F1F1F);
             fr.drawStringWithShadow(m.getName(), sr.getScaledWidth() - fr.getStringWidth(m.getName()), yCount - 2, -1);
             yCount += 12;
         }

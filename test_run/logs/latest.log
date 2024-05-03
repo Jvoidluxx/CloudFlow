@@ -1,0 +1,30 @@
+[16:44:05] [Client thread/INFO]: Setting user: Player876
+[16:44:05] [Client thread/INFO]: (Session ID is token:0:Player876)
+[16:44:06] [Client thread/INFO]: LWJGL Version: 2.9.4
+[16:44:07] [Client thread/INFO]: Reloading ResourceManager: Default
+[16:44:07] [Client thread/ERROR]: Couldn't initialize twitch stream
+[16:44:07] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[16:44:07] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[16:44:07] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[16:44:07] [Thread-6/INFO]: OpenAL initialized.
+[16:44:07] [Sound Library Loader/INFO]: Sound engine started
+[16:44:10] [Client thread/INFO]: Created: 512x512 textures-atlas
+[16:44:11] [Client thread/ERROR]: Realms module missing
+java.lang.ClassNotFoundException: com.mojang.realmsclient.gui.screens.RealmsNotificationsScreen
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_392]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418) ~[?:1.8.0_392]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352) ~[?:1.8.0_392]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351) ~[?:1.8.0_392]
+	at java.lang.Class.forName0(Native Method) ~[?:1.8.0_392]
+	at java.lang.Class.forName(Class.java:264) ~[?:1.8.0_392]
+	at net.minecraft.realms.RealmsBridge.getNotificationScreen(RealmsBridge.java:38) [classes/:?]
+	at net.minecraft.client.gui.GuiMainMenu.initGui(GuiMainMenu.java:247) [classes/:?]
+	at net.minecraft.client.gui.GuiScreen.setWorldAndResolution(GuiScreen.java:556) [classes/:?]
+	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1019) [classes/:?]
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:580) [classes/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:408) [classes/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [classes/:?]
+	at Start.main(Start.java:22) [test-classes/:?]
+[16:44:16] [Client thread/INFO]: Stopping!
+[16:44:16] [Client thread/INFO]: SoundSystem shutting down...
+[16:44:16] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

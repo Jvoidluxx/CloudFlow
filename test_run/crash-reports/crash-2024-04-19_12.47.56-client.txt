@@ -1,0 +1,98 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 19/04/24 12:47 PM
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at cloud.main.module.impl.combat.BowAimBot.equip(BowAimBot.java:49)
+	at cloud.main.module.impl.combat.BowAimBot.onEvent(BowAimBot.java:33)
+	at cloud.main.module.Manager.onEvent(Manager.java:45)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdateWalkingPlayer(EntityPlayerSP.java:195)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdate(EntityPlayerSP.java:184)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:1879)
+	at net.minecraft.world.World.updateEntity(World.java:1848)
+	at net.minecraft.world.World.updateEntities(World.java:1700)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2211)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1123)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:428)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:22)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at cloud.main.module.impl.combat.BowAimBot.equip(BowAimBot.java:49)
+	at cloud.main.module.impl.combat.BowAimBot.onEvent(BowAimBot.java:33)
+	at cloud.main.module.Manager.onEvent(Manager.java:45)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdateWalkingPlayer(EntityPlayerSP.java:195)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdate(EntityPlayerSP.java:184)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:1879)
+	at net.minecraft.world.World.updateEntity(World.java:1848)
+
+-- Entity being ticked --
+Details:
+	Entity Type: null (net.minecraft.client.entity.EntityPlayerSP)
+	Entity ID: 89
+	Entity Name: Player937
+	Entity's Exact location: 525.89, 68.00, 271.46
+	Entity's Block location: 525.00,68.00,271.00 - World: (525,68,271), Chunk: (at 13,4,15 in 32,16; contains blocks 512,0,256 to 527,255,271), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Rider: ~~ERROR~~ NullPointerException: null
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:1700)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player937'/89, l='MpServer', x=525.89, y=68.00, z=271.46]]
+	Chunk stats: MultiplayerChunkCache: 625, 625
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 584.00,64.00,166.00 - World: (584,64,166), Chunk: (at 8,4,6 in 36,10; contains blocks 576,0,160 to 591,255,175), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 79187 game time, 15405 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 53 total; [EntityPlayerSP['Player937'/89, l='MpServer', x=525.89, y=68.00, z=271.46], EntityZombie['Zombie'/2, l='MpServer', x=451.50, y=73.00, z=314.50], EntityZombie['Zombie'/3, l='MpServer', x=448.50, y=73.00, z=312.50], EntitySkeleton['Skeleton'/4, l='MpServer', x=475.53, y=75.00, z=272.88], EntitySpider['Spider'/9, l='MpServer', x=494.81, y=35.00, z=260.69], EntityBat['Bat'/10, l='MpServer', x=469.31, y=71.16, z=253.63], EntityItem['item.item.rottenFlesh'/266, l='MpServer', x=527.22, y=68.00, z=273.94], EntityZombie['Zombie'/11, l='MpServer', x=490.16, y=32.00, z=273.91], EntityZombie['Zombie'/12, l='MpServer', x=494.56, y=32.00, z=274.31], EntitySpider['Spider'/13, l='MpServer', x=490.13, y=34.09, z=275.28], EntityZombie['Zombie'/14, l='MpServer', x=495.16, y=68.00, z=339.03], EntityEnderman['Enderman'/15, l='MpServer', x=498.09, y=67.00, z=330.66], EntityEnderman['Enderman'/16, l='MpServer', x=495.50, y=68.00, z=342.50], EntityZombie['Zombie'/25, l='MpServer', x=502.50, y=35.00, z=249.50], EntityCreeper['Creeper'/26, l='MpServer', x=510.19, y=61.00, z=238.81], EntityCreeper['Creeper'/27, l='MpServer', x=509.69, y=62.00, z=255.53], EntitySkeleton['Skeleton'/28, l='MpServer', x=514.09, y=63.00, z=254.50], EntityCreeper['Creeper'/29, l='MpServer', x=504.94, y=35.00, z=264.34], EntityArrow['Arrow'/30, l='MpServer', x=511.00, y=69.00, z=256.47], EntityCreeper['Creeper'/31, l='MpServer', x=506.41, y=36.00, z=274.03], EntitySkeleton['Skeleton'/32, l='MpServer', x=520.50, y=66.00, z=223.50], EntitySkeleton['Skeleton'/33, l='MpServer', x=510.50, y=61.00, z=240.16], EntityArrow['Arrow'/34, l='MpServer', x=515.03, y=68.00, z=225.53], EntityArrow['Arrow'/35, l='MpServer', x=520.97, y=68.00, z=250.81], EntityArrow['Arrow'/36, l='MpServer', x=527.00, y=67.91, z=250.06], EntitySkeleton['Skeleton'/37, l='MpServer', x=509.38, y=62.00, z=254.72], EntityBat['Bat'/38, l='MpServer', x=522.31, y=23.31, z=294.94], EntitySpider['Spider'/39, l='MpServer', x=517.69, y=15.00, z=291.28], EntitySkeleton['Skeleton'/40, l='MpServer', x=517.50, y=37.00, z=290.50], EntityCreeper['Creeper'/42, l='MpServer', x=535.88, y=31.00, z=323.81], EntityEnderman['Enderman'/43, l='MpServer', x=538.50, y=32.00, z=341.50], EntityCreeper['Creeper'/44, l='MpServer', x=556.50, y=67.00, z=228.50], EntityCreeper['Creeper'/45, l='MpServer', x=555.50, y=41.00, z=286.50], EntityCreeper['Creeper'/46, l='MpServer', x=554.41, y=41.00, z=289.03], EntityZombie['Zombie'/47, l='MpServer', x=553.78, y=60.00, z=297.72], EntityCreeper['Creeper'/48, l='MpServer', x=548.50, y=31.00, z=329.50], EntityZombie['Zombie'/52, l='MpServer', x=560.50, y=67.00, z=233.50], EntityZombie['Zombie'/53, l='MpServer', x=561.03, y=66.00, z=229.31], EntityCreeper['Creeper'/54, l='MpServer', x=574.50, y=28.00, z=305.50], EntityBat['Bat'/55, l='MpServer', x=561.13, y=33.10, z=329.75], EntityArrow['Arrow'/183, l='MpServer', x=531.16, y=67.00, z=249.03], EntityCreeper['Creeper'/58, l='MpServer', x=580.50, y=15.00, z=260.50], EntityBat['Bat'/59, l='MpServer', x=582.75, y=37.10, z=293.88], EntityCreeper['Creeper'/60, l='MpServer', x=584.50, y=12.00, z=313.50], EntityZombie['Zombie'/61, l='MpServer', x=581.31, y=73.00, z=328.63], EntityCreeper['Creeper'/62, l='MpServer', x=583.53, y=65.00, z=327.53], EntityCreeper['Creeper'/63, l='MpServer', x=585.00, y=63.00, z=345.56], EntityZombie['Zombie'/66, l='MpServer', x=594.81, y=28.00, z=325.56], EntityCreeper['Creeper'/67, l='MpServer', x=605.97, y=23.00, z=339.66], EntitySpider['Spider'/68, l='MpServer', x=593.69, y=23.00, z=341.63], EntityCreeper['Creeper'/69, l='MpServer', x=600.53, y=65.00, z=348.03], EntityItem['item.item.rottenFlesh'/210, l='MpServer', x=525.78, y=68.00, z=265.34], EntityArrow['Arrow'/246, l='MpServer', x=529.66, y=68.00, z=264.09]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:390)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2777)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:449)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:22)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_392, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 669512368 bytes (638 MB) / 989855744 bytes (944 MB) up to 3771203584 bytes (3596 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 99
+	Launched Version: MavenMCP
+	LWJGL: 2.9.4
+	OpenGL: AMD Radeon RX 6600 XT GL version 4.6.0 Compatibility Profile Context 24.3.1.240312, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 12x AMD Ryzen 5 5600G with Radeon Graphics 

@@ -6,10 +6,9 @@ import cloud.main.events.impl.Event2D;
 import cloud.main.module.Category;
 import cloud.main.module.Manager;
 import cloud.main.module.Module;
-import cloud.main.utils.BlurUtils;
-import cloud.main.utils.RenderUtil;
 import cloud.main.utils.fontutils.FontRenderer;
 import cloud.main.utils.settings.BooleanSetting;
+import cloud.main.utils.settings.NumberSetting;
 import net.minecraft.client.gui.ScaledResolution;
 import org.lwjgl.input.Keyboard;
 

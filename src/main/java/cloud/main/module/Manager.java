@@ -3,6 +3,7 @@ package cloud.main.module;
 import cloud.Cloud;
 import cloud.main.events.Event;
 import cloud.main.events.impl.EventChat;
+import cloud.main.events.impl.EventUpdate;
 import cloud.main.module.impl.combat.AntiBot;
 import cloud.main.module.impl.combat.Killaura;
 import cloud.main.module.impl.misc.AutoRespawn;
@@ -12,7 +13,10 @@ import cloud.main.module.impl.movement.Sprint;
 import cloud.main.module.impl.render.*;
 import cloud.main.module.impl.world.Scaffold;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiChat;
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.util.ChatComponentText;
+import org.lwjgl.input.Keyboard;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +50,12 @@ public class Manager {
             if (k == m.getKey()) { // if the module's key is pressed
                 m.toggle(); // toggle the module
             }
+        }
+        chatKey(k);
+    }
+    public static void chatKey(int key) {
+        if (key == Keyboard.KEY_PERIOD) {
+            Minecraft.getMinecraft().displayGuiScreen(new GuiChat("."));
         }
     }
     public static void onEvent(Event e) {

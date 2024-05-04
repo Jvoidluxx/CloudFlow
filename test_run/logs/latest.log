@@ -1,15 +1,15 @@
-[18:57:20] [Client thread/INFO]: Setting user: Player687
-[18:57:20] [Client thread/INFO]: (Session ID is token:0:Player687)
-[18:57:20] [Client thread/INFO]: LWJGL Version: 2.9.4
-[18:57:21] [Client thread/INFO]: Reloading ResourceManager: Default
-[18:57:21] [Client thread/ERROR]: Couldn't initialize twitch stream
-[18:57:21] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[18:57:21] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[18:57:21] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[18:57:21] [Thread-6/INFO]: OpenAL initialized.
-[18:57:21] [Sound Library Loader/INFO]: Sound engine started
-[18:57:23] [Client thread/INFO]: Created: 512x512 textures-atlas
-[18:57:24] [Client thread/ERROR]: Realms module missing
+[08:41:27] [Client thread/INFO]: Setting user: Player875
+[08:41:27] [Client thread/INFO]: (Session ID is token:0:Player875)
+[08:41:28] [Client thread/INFO]: LWJGL Version: 2.9.4
+[08:41:28] [Client thread/INFO]: Reloading ResourceManager: Default
+[08:41:28] [Client thread/ERROR]: Couldn't initialize twitch stream
+[08:41:28] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[08:41:28] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[08:41:28] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[08:41:28] [Thread-6/INFO]: OpenAL initialized.
+[08:41:29] [Sound Library Loader/INFO]: Sound engine started
+[08:41:30] [Client thread/INFO]: Created: 512x512 textures-atlas
+[08:41:30] [Client thread/ERROR]: Realms module missing
 java.lang.ClassNotFoundException: com.mojang.realmsclient.gui.screens.RealmsNotificationsScreen
 	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_392]
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:418) ~[?:1.8.0_392]
@@ -25,7 +25,7 @@ java.lang.ClassNotFoundException: com.mojang.realmsclient.gui.screens.RealmsNoti
 	at net.minecraft.client.Minecraft.run(Minecraft.java:408) [classes/:?]
 	at net.minecraft.client.main.Main.main(Main.java:113) [classes/:?]
 	at Start.main(Start.java:22) [test-classes/:?]
-[18:57:39] [Client thread/ERROR]: Realms module missing
+[08:41:47] [Client thread/ERROR]: Realms module missing
 java.lang.ClassNotFoundException: com.mojang.realmsclient.gui.screens.RealmsNotificationsScreen
 	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_392]
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:418) ~[?:1.8.0_392]
@@ -47,11 +47,11 @@ java.lang.ClassNotFoundException: com.mojang.realmsclient.gui.screens.RealmsNoti
 	at net.minecraft.client.Minecraft.run(Minecraft.java:428) [classes/:?]
 	at net.minecraft.client.main.Main.main(Main.java:113) [classes/:?]
 	at Start.main(Start.java:22) [test-classes/:?]
-[18:57:40] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
-[18:57:40] [Server thread/INFO]: Generating keypair
-[18:57:40] [Server thread/INFO]: Preparing start region for level 0
-[18:57:40] [Server thread/INFO]: Changing view distance to 12, from 10
-[18:57:40] [Client thread/ERROR]: Realms module missing
+[08:41:47] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
+[08:41:47] [Server thread/INFO]: Generating keypair
+[08:41:47] [Server thread/INFO]: Preparing start region for level 0
+[08:41:48] [Server thread/INFO]: Changing view distance to 12, from 10
+[08:41:48] [Client thread/ERROR]: Realms module missing
 java.lang.ClassNotFoundException: com.mojang.realmsclient.gui.screens.RealmsNotificationsScreen
 	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_392]
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:418) ~[?:1.8.0_392]
@@ -74,9 +74,9 @@ java.lang.ClassNotFoundException: com.mojang.realmsclient.gui.screens.RealmsNoti
 	at net.minecraft.client.Minecraft.run(Minecraft.java:428) [classes/:?]
 	at net.minecraft.client.main.Main.main(Main.java:113) [classes/:?]
 	at Start.main(Start.java:22) [test-classes/:?]
-[18:57:41] [Server thread/INFO]: Player687[local:E:5f85f30d] logged in with entity id 88 at (576.150064894966, 73.0, 314.82500441393813)
-[18:57:41] [Server thread/INFO]: Player687 joined the game
-[19:03:20] [Server thread/INFO]: Saving and pausing game...
-[19:03:20] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[19:03:20] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[19:03:20] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[08:41:48] [Server thread/INFO]: Player875[local:E:efd554b7] logged in with entity id 166 at (570.4318823771926, 70.0, 141.47429428523873)
+[08:41:48] [Server thread/INFO]: Player875 joined the game
+[08:43:37] [Server thread/INFO]: Saving and pausing game...
+[08:43:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[08:43:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[08:43:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End

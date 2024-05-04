@@ -1,24 +1,23 @@
 {
   "Sprint": {
-    "toggled": true,
+    "toggled": false,
     "key": 33
   },
   "Speed": {
-    "toggled": false,
+    "toggled": true,
     "key": 21,
     "Mode": "Vanilla",
-    "Vulcan Speed": 0.3200000151991844,
-    "Vulcan Timer": 1.0000000149011612
+    "Vulcan Speed": 0.3199999928474426,
+    "Vulcan Timer": 1.0
   },
   "HUD": {
     "toggled": true,
     "key": 0,
     "ArrayList": true,
-    "Watermark": true,
-    "Blur": false
+    "Watermark": true
   },
   "ItemPhysics": {
-    "toggled": true,
+    "toggled": false,
     "key": 47
   },
   "ClickGUI": {
@@ -26,7 +25,7 @@
     "key": 54
   },
   "Killaura": {
-    "toggled": true,
+    "toggled": false,
     "key": 19,
     "Player": true,
     "Animals": true,
@@ -39,7 +38,7 @@
     "toggled": false,
     "key": 0,
     "Mode": "Vanilla",
-    "Speed": 1.910000090720132
+    "Speed": 1.0
   },
   "No Rotate": {
     "toggled": false,
@@ -48,16 +47,16 @@
   "FullBright": {
     "toggled": false,
     "key": 0,
-    "Brightness": 160.84
+    "Brightness": 100.0
   },
   "Scaffold": {
-    "toggled": true,
+    "toggled": false,
     "key": 34,
-    "Tower": "NCP",
+    "Tower": "Legit",
     "Timer": 1.0
   },
   "AutoRespawn": {
-    "toggled": true,
+    "toggled": false,
     "key": 0
   },
   "AntiBot": {

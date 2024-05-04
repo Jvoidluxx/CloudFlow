@@ -53,6 +53,65 @@ public class ConfigManager {
             e.printStackTrace();
         }
     }
+    public void saveCustomConfig(File file) {
+        try {
+            JsonObject json = new JsonObject();
+            for (Module m : Manager.modules) {
+                JsonObject jsonMod = new JsonObject();
+                jsonMod.addProperty("toggled", m.isToggled());
+                jsonMod.addProperty("key", m.getKey());
+                for (Setting s : m.getSettings()) {
+                    if (s instanceof BooleanSetting) {
+                        jsonMod.addProperty(s.getName(), ((BooleanSetting) s).isEnabled());
+                    } else if (s instanceof ModeSetting) {
+                        jsonMod.addProperty(s.getName(), ((ModeSetting) s).getMode());
+                    } else if (s instanceof NumberSetting) {
+                        jsonMod.addProperty(s.getName(), ((NumberSetting) s).getValue());
+                    }
+                }
+                json.add(m.getName(), jsonMod);
+            }
+            PrintWriter save = new PrintWriter(new FileWriter(file));
+            save.println(JsonUtils.prettyNikker.toJson(json));
+            save.close();
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void loadCustomConfig(File file) {
+        if (!file.exists()) {
+            Manager.addClientMessage("Config does not exist");
+            return;
+        }
+        try {
+            BufferedReader load = new BufferedReader(new FileReader(file));
+            JsonObject json = (JsonObject) JsonUtils.jsonParser.parse(load);
+            load.close();
+            Iterator<Map.Entry<String, JsonElement>> itr = json.entrySet().iterator();
+            while (itr.hasNext()) {
+                Map.Entry<String, JsonElement> entry = itr.next();
+                Module mod = Manager.getModule(entry.getKey());
+                JsonObject jsonModule = entry.getValue().getAsJsonObject();
+                boolean enabled = jsonModule.get("toggled").getAsBoolean();
+                for (Setting s : mod.getSettings()) {
+                    if (s instanceof BooleanSetting) {
+                        boolean boolSetEnabled = jsonModule.get(s.getName()).getAsBoolean();
+                        ((BooleanSetting) s).setEnabled(boolSetEnabled);
+                    } else if (s instanceof ModeSetting) {
+                        String mode = jsonModule.get(s.getName()).getAsString();
+                        ((ModeSetting) s).setMode(mode);
+                    } else if (s instanceof NumberSetting) {
+                        float num = jsonModule.get(s.getName()).getAsFloat();
+                        ((NumberSetting) s).setValue(num);
+                    }
+                }
+                mod.setToggled(enabled);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public void loadConfig() {
         try {
             BufferedReader load = new BufferedReader(new FileReader(modules));

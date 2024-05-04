@@ -10,7 +10,7 @@ public class Cloud {
     protected static Minecraft mc = Minecraft.getMinecraft();
     public static CommandManager commandManager = new CommandManager();
     public static ConfigManager configManager = new ConfigManager();
-    public static String name = "CloudFlow", version = "1.0.1";
+    public static String name = "CloudFlow", version = "1.0.3";
 
     public static void init() {
         Manager manager = new Manager();

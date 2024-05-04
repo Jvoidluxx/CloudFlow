@@ -2,6 +2,8 @@ package cloud.main.commandbase;
 
 import cloud.main.commandbase.impl.Adjust;
 import cloud.main.commandbase.impl.Bind;
+import cloud.main.commandbase.impl.Config;
+import cloud.main.commandbase.impl.Help;
 import cloud.main.events.impl.EventChat;
 import cloud.main.module.Manager;
 
@@ -18,6 +20,8 @@ public class CommandManager {
     public void setup() {
         commands.add(new Bind());
         commands.add(new Adjust());
+        commands.add(new Config());
+        commands.add(new Help());
     }
     public static List<Command> getCommands() {
         return commands;

@@ -40,6 +40,8 @@ public class Manager {
         modules.add(new Scaffold());
         modules.add(new AutoRespawn());
         modules.add(new AntiBot()); // killaura might not work if this is enabled
+        modules.add(new ChestESP());
+        modules.add(new ESP());
     }
 
     public static ArrayList<Module> getModules() {

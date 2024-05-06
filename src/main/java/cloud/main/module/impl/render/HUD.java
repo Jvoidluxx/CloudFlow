@@ -32,6 +32,7 @@ public class HUD extends Module {
     @Override
     public void onEvent(Event e) {
         if (e instanceof Event2D) {
+            if (mc.gameSettings.showDebugInfo) return;
             if (watermark.isEnabled()) {
                 drawWaterMark();
             }

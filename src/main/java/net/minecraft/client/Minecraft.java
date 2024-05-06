@@ -401,6 +401,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
 
     public void run()
     {
+        Cloud.discordRP.start();
         this.running = true;
 
         try
@@ -2343,6 +2344,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
         networkmanager.sendPacket(new C00Handshake(47, socketaddress.toString(), 0, EnumConnectionState.LOGIN));
         networkmanager.sendPacket(new C00PacketLoginStart(this.getSession().getProfile()));
         this.myNetworkManager = networkmanager;
+        Cloud.discordRP.update("Playing SinglePlayer", "In Game");
     }
 
     /**

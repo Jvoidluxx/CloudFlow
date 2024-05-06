@@ -25,9 +25,10 @@ public class Speed extends Module {
     public NumberSetting vulcanSpeed = new NumberSetting("Vulcan Speed", 0.1f, 5.0f, 0.32f, 0.001f);
     public NumberSetting vanillaSpeed = new NumberSetting("Vanilla Speed", 0.1f, 5.0f, 0.32f, 0.001f);
     public NumberSetting vulcanTimer = new NumberSetting("Vulcan Timer", 0.1f, 10.0f, 1.0f, 0.1f);
+    public BooleanSetting hop = new BooleanSetting("Hop", true);
     public Speed() {
         super("Speed", "Makes you move faster", Keyboard.KEY_Y, Category.MOVEMENT);
-        addSettings(modes, vulcanSpeed, vulcanTimer);
+        addSettings(modes, vulcanSpeed, vulcanTimer, hop);
     }
 
     @Override
@@ -39,6 +40,7 @@ public class Speed extends Module {
     @Override
     public void onEvent(Event e) {
         if (e instanceof EventUpdate) {
+            mc.gameSettings.keyBindJump.pressed = hop.isEnabled();
             switch (modes.getMode()) {
                 case "Vanilla": {
                     MoveUtil.setSpeed(vanillaSpeed.getValueFloat());

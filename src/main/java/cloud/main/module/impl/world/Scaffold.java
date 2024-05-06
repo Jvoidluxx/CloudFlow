@@ -7,9 +7,11 @@ import cloud.main.module.Category;
 import cloud.main.module.Module;
 import cloud.main.utils.PacketUtil;
 import cloud.main.utils.PlayerUtil;
+import cloud.main.utils.settings.BooleanSetting;
 import cloud.main.utils.settings.ModeSetting;
 import cloud.main.utils.settings.NumberSetting;
 import net.minecraft.block.BlockAir;
+import net.minecraft.block.BlockChest;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.projectile.EntityEgg;
 import net.minecraft.init.Blocks;
@@ -28,9 +30,10 @@ public class Scaffold extends Module {
     // scaffold from superblaubeere27
     public ModeSetting tower = new ModeSetting("Tower", "Legit", "Legit", "Vanilla", "NCP");
     private NumberSetting timer = new NumberSetting("Timer", 0.1, 10, 1.0, 0.1);
+    public BooleanSetting placeChests = new BooleanSetting("PlaceChests", false);
     public Scaffold() {
         super("Scaffold", "Bridges for you", Keyboard.KEY_G, Category.WORLD);
-        addSettings(tower, timer);
+        addSettings(tower, timer, placeChests);
     }
     private BlockPos currentPos;
     private EnumFacing currentFacing;
@@ -66,6 +69,8 @@ public class Scaffold extends Module {
 
                     if (currentPos != null) {
                         if (mc.thePlayer.getCurrentEquippedItem() != null && mc.thePlayer.getCurrentEquippedItem().getItem() instanceof ItemBlock) {
+                            ItemBlock chest = (ItemBlock) mc.thePlayer.getCurrentEquippedItem().getItem();
+                            if (chest.getBlock() instanceof BlockChest) return;
                             if (mc.playerController.onPlayerRightClick(mc.thePlayer, mc.theWorld, mc.thePlayer.getCurrentEquippedItem(), currentPos, currentFacing, new Vec3(currentPos.getX(), currentPos.getY(), currentPos.getZ()))) {
                                 switch (tower.getMode()) {
                                     case "Legit":

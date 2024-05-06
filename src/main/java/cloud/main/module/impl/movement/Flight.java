@@ -26,6 +26,12 @@ public class Flight extends Module {
     }
 
     @Override
+    public void onDisable() {
+        mc.thePlayer.capabilities.isFlying = false;
+        mc.thePlayer.capabilities.allowFlying = false;
+    }
+
+    @Override
     public void onEvent(Event e) {
         if (e instanceof EventMotion) {
             switch (mode.getMode()) {

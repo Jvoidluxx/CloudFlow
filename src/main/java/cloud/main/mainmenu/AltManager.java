@@ -5,7 +5,6 @@ import cloud.main.utils.fontutils.FontRenderer;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthResult;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthenticationException;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthenticator;
-import fr.litarvan.openauth.microsoft.model.response.MinecraftProfile;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiTextField;
@@ -13,10 +12,6 @@ import net.minecraft.util.Session;
 
 import java.awt.*;
 import java.io.IOException;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 public class AltManager extends GuiScreen {
     //davidne was here bleehhh bad code 1/10 client ong

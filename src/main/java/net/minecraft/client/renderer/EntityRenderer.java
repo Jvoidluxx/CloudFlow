@@ -1,5 +1,7 @@
 package net.minecraft.client.renderer;
 
+import cloud.main.events.impl.EventRender;
+import cloud.main.module.Manager;
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.gson.JsonSyntaxException;
@@ -1478,6 +1480,8 @@ public class EntityRenderer implements IResourceManagerReloadListener
         }
 
         this.mc.mcProfiler.endStartSection("hand");
+        EventRender e = new EventRender();
+        Manager.onEvent(e);
 
         if (this.renderHand)
         {
